@@ -57,9 +57,10 @@ function init() {
       name: 'tests',
     },
     {
-      type: 'input',
+      type: 'checkbox',
       message: 'What is the license for this project?',
       name: 'license',
+      choices: ['Apache', "Boost", "BSD", "Creative Commons", "Eclipse", "GNU", "IBM", "MIT"]
     },
     {
       type: 'input',
