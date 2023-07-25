@@ -1,17 +1,9 @@
-// TODO: Include packages needed for this application
+// importing needed modules and documents
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markdown = require('./utils/generateMarkdown');
-// TODO: Create an array of questions for user input
 
-  
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFileSync(fileName, data)
-}
-
-// TODO: Create a function to initialize app
+// the initializing function handles asking and recording questions and printing the md document.
 function init() {
   inquirer
   .prompt([
@@ -24,12 +16,6 @@ function init() {
       type: 'input',
       message: 'What is your projects description?',
       name: 'description',
-    },
-    {
-      type: 'checkbox',
-      message: 'What sections would you like in your README?',
-      name: 'table',
-      choices:["Installation", "Usage", "Credits", "License", "Features", "Questions"]
     },
     {
       type: 'input',
@@ -60,7 +46,7 @@ function init() {
       type: 'checkbox',
       message: 'What is the license for this project?',
       name: 'license',
-      choices: ["Apache", "Creative Commons", "MIT"]
+      choices: ["Apache", "Boost", "MIT"]
     },
     {
       type: 'input',
@@ -82,5 +68,5 @@ function init() {
 
 }
 
-// Function call to initialize app
+// calling the function
 init();

@@ -1,4 +1,4 @@
-
+// function to render license badge if a choice to chosen.
 function renderLicenseBadge(license) {
 if (license !== "None") {
   return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`;
@@ -6,7 +6,7 @@ if (license !== "None") {
   return ``
   }
 }
-
+// function to return link depending on users license
 function renderLicenseLink(license) {
   if (license == "Apache") {
     return `https://www.apache.org/licenses/LICENSE-2.0`
@@ -14,12 +14,12 @@ function renderLicenseLink(license) {
   if (license == "MIT") {
     return `https://opensource.org/license/mit/`
   }
-  if (license == "Creative Commons") {
-    return `https://creativecommons.org/licenses/`
+  if (license == "Boost") {
+    return `https://www.boost.org/LICENSE_1_0.txt `
   }
 }
 
-
+// function to generate README
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
